@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8"> <!-- Added for better encoding support -->
+    <title>Basic Plan Pricing | VibeCoding</title> <!-- Added title for SEO and labeling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,15 +10,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="pricing">
-      <h2 class="title">Basic Plan</h2>
-      <p class="price">$9.99 /month</p>
-      <ul class="features">
-        <li>1 GB Storage</li>
-        <li>Basic Support</li>
-        <li>All Core Features</li>
-      </ul>
-      <button class="btn">Start Trial</button>
-    </div>
+    <main>
+      <section class="pricing" aria-label="Basic Plan Pricing">
+        <header>
+          <h2 class="title">Basic Plan</h2>
+        </header>
+        <p class="price">$9.99 /month</p>
+        <ul class="features">
+          <li>1 GB Storage</li>
+          <li>Basic Support</li>
+          <li>All Core Features</li>
+        </ul>
+        <button class="btn" aria-label="Start free trial for Basic Plan">Start Trial</button>
+      </section>
+    </main>
   </body>
 </html>

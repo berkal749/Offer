@@ -1,73 +1,128 @@
+/* CSS Variables for easy theming */
+:root {
+  --bg-color: #1a1a1a;
+  --card-bg: #2d2d2d;
+  --primary: #4caf50;
+  --primary-hover: #00ff88;
+  --text-main: #ffffff;
+  --text-secondary: #e0e0e0;
+  --border: #404040;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #1a1a1a;
+  background-color: var(--bg-color);
   font-family: "Roboto", sans-serif;
 }
+
 .pricing {
-  width: 300px;
-  background-color: #2d2d2d;
+  width: 320px;
+  background-color: var(--card-bg);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  padding: 24px 18px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 12px;
+  margin: 16px;
+  transition: box-shadow 0.3s, transform 0.3s;
 }
+.pricing:hover,
+.pricing:focus-within {
+  box-shadow: 0 0 32px 4px var(--primary-hover);
+  transform: translateY(-4px) scale(1.03);
+}
+
 .title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--text-main);
+  margin-bottom: 12px;
 }
+
 .price {
-  font-size: 18px;
-  color: #4caf50;
-  transition: all 0.3s ease;
+  font-size: 20px;
+  color: var(--primary);
+  transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
   cursor: pointer;
   position: relative;
+  margin-bottom: 16px;
 }
-.price:hover {
-  color: #00ff88;
-  text-shadow: 0 0 10px #00ff88;
+.price:hover,
+.price:focus {
+  color: var(--primary-hover);
+  text-shadow: 0 0 10px var(--primary-hover);
   transform: scale(1.05);
   z-index: 1;
 }
+
 .features {
   list-style: none;
   padding-left: 0;
-  color: #e0e0e0;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
 }
 .features li {
-  padding: 4px;
-  border-bottom: 1px solid #404040;
-  transition: all 0.3s ease;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.3s, text-shadow 0.3s, transform 0.3s, background 0.3s;
   position: relative;
   cursor: pointer;
 }
-.features li:hover {
-  color: #00ff88;
-  text-shadow: 0 0 10px #00ff88;
+.features li:last-child {
+  border-bottom: none;
+}
+.features li:hover,
+.features li:focus {
+  color: var(--primary-hover);
+  text-shadow: 0 0 10px var(--primary-hover);
   transform: scale(1.05);
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(0, 255, 136, 0.08);
   border-radius: 4px;
   z-index: 1;
 }
+
 .btn {
-  background: #4caf50;
-  color: white;
-  padding: 10px 20px;
+  background: var(--primary);
+  color: var(--text-main);
+  padding: 12px 28px;
   border: none;
-  margin-top: 10px;
-  border-radius: 4px;
+  margin-top: 14px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s, color 0.3s, text-shadow 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
+  font-size: 1rem;
+  outline: none;
 }
-.btn:hover {
-  background: #00ff88;
-  color: #1a1a1a;
-  text-shadow: 0 0 10px #00ff88;
+.btn:hover,
+.btn:focus {
+  background: var(--primary-hover);
+  color: var(--bg-color);
+  text-shadow: 0 0 10px var(--primary-hover);
   transform: scale(1.05);
+  box-shadow: 0 0 12px 2px var(--primary-hover);
   z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .pricing {
+    width: 95vw;
+    padding: 16px 4vw;
+    margin: 8px;
+  }
+  .title {
+    font-size: 20px;
+  }
+  .price {
+    font-size: 18px;
+  }
+  .btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
 }
