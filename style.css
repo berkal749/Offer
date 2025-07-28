@@ -97,14 +97,18 @@ body {
   font-size: 1rem;
   outline: none;
 }
-.btn:hover,
-.btn:focus {
+.btn:hover {
   background: var(--primary-hover);
   color: var(--bg-color);
   text-shadow: 0 0 10px var(--primary-hover);
   transform: scale(1.05);
   box-shadow: 0 0 12px 2px var(--primary-hover);
   z-index: 1;
+}
+
+.btn:focus {
+  outline: 2px solid var(--primary-hover);
+  outline-offset: 2px;
 }
 
 /* Responsive Design */
