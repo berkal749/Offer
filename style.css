@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1a1a1a;
+  font-family: "Roboto", sans-serif;
+}
+.pricing {
+  width: 300px;
+  background-color: #2d2d2d;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.price {
+  font-size: 18px;
+  color: #4caf50;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+.price:hover {
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+  transform: scale(1.05);
+  z-index: 1;
+}
+.features {
+  list-style: none;
+  padding-left: 0;
+  color: #e0e0e0;
+}
+.features li {
+  padding: 4px;
+  border-bottom: 1px solid #404040;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+.features li:hover {
+  color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+  transform: scale(1.05);
+  background: rgba(0, 255, 136, 0.1);
+  border-radius: 4px;
+  z-index: 1;
+}
+.btn {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.btn:hover {
+  background: #00ff88;
+  color: #1a1a1a;
+  text-shadow: 0 0 10px #00ff88;
+  transform: scale(1.05);
+  z-index: 1;
+}
